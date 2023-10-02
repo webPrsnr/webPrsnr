@@ -54,8 +54,12 @@
 					font-weight: 700;
 				}
 
-				.image{
+				.image {
 					font-size: 70%;
+				}
+
+				.image__img{
+					border: 1px solid var(--color-secondary);
 				}
 
 				.op__images {
@@ -102,7 +106,7 @@
 					display: flex;
 					gap: 6px;
 					font-size: 0.9em;
-					    padding-left: 0.5rem;
+					padding-left: 0.5rem;
 					color: var(--color-secondary);
 					align-items: center;
 				}
@@ -142,34 +146,28 @@
 									</div>
 									<div class="image__descr">
 										<span>176КБ</span>
-										<span>466x777</span>
+										<span>180x180</span>
 									</div>
 								</figcaption>
-								<img src="https://github.com/webPrsnr/webPrsnr/blob/main/1.png" width="180" height="160" />
-							</figure>
-							<figure class="image">
-								<figcaption>
-									<div class="link__active">
-										<span>61878411374879.jpg</span>
-									</div>
-									<div class="image__descr">
-										<span>176КБ</span>
-										<span>466x777</span>
-									</div>
-								</figcaption>
-								<img src="2.webp" width="180" height="160" />
-							</figure>
-							<figure class="image">
-								<figcaption>
-									<div class="link__active">
-										<span>61878411374879.jpg</span>
-									</div>
-									<div class="image__descr">
-										<span>176КБ</span>
-										<span>466x777</span>
-									</div>
-								</figcaption>
-								<img src="3.webp" width="180" height="160" />
+								<div class="image__img">
+									<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" fill="none">
+										<path stroke="#000" stroke-linecap="round" stroke-width="3.75"
+											d="M61.695 102.986c0 36.968 41.959 56.28 62.606 56.948 36.049 0 38.963-54.863 38.963-90.915 0-36.045-31.482-65.269-67.526-65.269-36.05 0-65.273 29.224-65.273 65.269 0 16.312 5.981 31.222 15.87 42.664 2.014 10.312 3.503 33.93-6.619 45.918-10.125 11.989-20.868 17.426-24.975 18.649" />
+										<path stroke="#000" stroke-width="3.75"
+											d="M124.301 159.934c-.776 3.439 3.33 10.856 7.324 11.655 3.998.799 22.537 2.887 33.638 3.994" />
+										<path stroke="#000" stroke-linecap="round" stroke-width="3.75"
+											d="M86.475 40.894c25.785 4.413 18.098-8.509 47.535-.623M79.013 53.212c33.88 4.414 23.774-8.505 62.463-.622M84.514 68.483c3.075-4.036 12.06-6.38 21.214-3.792M146.325 68.483c-3.187-3.552-12.172-5.84-21.214-3.792M102.892 134.123c11.73 0 17.333.326 26.948.105a7.605 7.605 0 0 1 5.963 2.647l.603.705" />
+										<path stroke="#000" stroke-width="3.75"
+											d="M107.483 87.668c0 3.588-9.424 3.164-16.32 3.164-6.897 0-9.158-5.324-8.326-8.16 2.802-9.513 24.645-4.844 24.645 4.996ZM126.094 87.668c0 3.588 9.42 3.164 16.316 3.164 6.9 0 9.158-5.324 8.325-8.16-2.798-9.513-24.641-4.844-24.641 4.996Z" />
+										<path stroke="#000" stroke-linecap="round" stroke-width="3.75"
+											d="M118.639 97.819c4.327 6.66 13.987 8.58 13.987 13.65 0 6.172-4.995 9.832-9.99 7.837" />
+										<path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+											stroke-width="3.75" d="M110.794 114.611c-1.29 2.468-1.639 3.803 0 5.243" />
+										<path fill="#000" fill-rule="evenodd"
+											d="M99.026 79.41a5.719 5.719 0 1 0 0 11.438 5.719 5.719 0 0 0 0-11.438ZM141.476 78.442a5.719 5.719 0 1 0 0 11.438 5.719 5.719 0 0 0 0-11.438Z"
+											clip-rule="evenodd" />
+									</svg>
+								</div>
 							</figure>
 						</div>
 						<article class="op__article">
@@ -210,7 +208,7 @@
 								>>41795612
 							</span>
 							<span>
-								contact with me: <span class="link__active">yl29qtw6e@mozmail.com</span>
+								contacts: <span class="link__active">yl29qtw6e@mozmail.com</span>
 							</span>
 						</article>
 					</section>
