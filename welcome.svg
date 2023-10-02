@@ -83,7 +83,7 @@
 
 				.reply {
 					position: relative;
-					max-width: 28vw;
+					max-width: 20rem;
 					background-color: var(--color-reply-bg);
 					margin: 2px 0 4px 20px;
 					border-radius: 3px;
@@ -145,7 +145,7 @@
 										<span>466x777</span>
 									</div>
 								</figcaption>
-								<img src="1.png" width="180" height="160" />
+								<img src="https://github.com/webPrsnr/webPrsnr/blob/main/1.png" width="180" height="160" />
 							</figure>
 							<figure class="image">
 								<figcaption>
