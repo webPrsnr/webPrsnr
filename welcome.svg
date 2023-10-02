@@ -1,4 +1,4 @@
-<svg fill="none" viewBox="0 0 600 600" width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 600 450" width="600" height="450" xmlns="http://www.w3.org/2000/svg">
 	<foreignObject width="100%" height="100%">
 		<div xmlns="http://www.w3.org/1999/xhtml">
 			<style>
@@ -72,7 +72,7 @@
 
 
 				.op__article {
-					padding: 16px 36px;
+					padding: 10px 36px;
 				}
 
 				footer {
@@ -174,7 +174,7 @@
 							▲<br />▲ ▲
 						</article>
 						<footer class="link__active">
-							<span>>>41795613</span><span>>>41795614</span>
+							<span>>>41795613</span>
 						</footer>
 					</section>
 					<section class="reply">
@@ -191,25 +191,8 @@
 								>>41795612
 							</span>
 							Stack: JS, TS, HTML/CSS, React,
-							Vue.
-						</article>
-					</section>
-					<section class="reply">
-						<div class="reply__detail">
-							<span>Info</span>
-							<span>30/09/23</span>
-							<span>Sub</span>
-							<span>20:41:39</span>
-							<span>№41795614</span>
-							<span class="link">3</span>
-						</div>
-						<article class="reply__post">
-							<span class="reply__to">
-								>>41795612
-							</span>
-							<span>
-								contacts: <span class="link__active">yl29qtw6e@mozmail.com</span>
-							</span>
+							Vue. <br />
+							contact: <span class="link__active">yl29qtw6e@mozmail.com</span>
 						</article>
 					</section>
 				</div>
