@@ -83,7 +83,7 @@
 
 				.reply {
 					position: relative;
-					width: 28vw;
+					max-width: 28vw;
 					background-color: var(--color-reply-bg);
 					margin: 2px 0 4px 20px;
 					border-radius: 3px;
@@ -115,11 +115,6 @@
 					display: block;
 					color: var(--color-link-active)
 				}
-				.img__1{
-					background-image: url("./img/1.webp");
-					height: 160px;
-					width: 180px;
-				}
 			</style>
 			<div class='body'>
 				<div class='container'>
@@ -150,7 +145,7 @@
 										<span>466x777</span>
 									</div>
 								</figcaption>
-								<div class="img__1" width="180" height="160"></div>
+								<img src="./img/1.webp" width="180" height="160" />
 							</figure>
 							<figure class="image">
 								<figcaption>
