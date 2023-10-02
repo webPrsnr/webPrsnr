@@ -1,5 +1,5 @@
-<div style="width:100%;">
+<div>
     <a href="mailto:yl29qtw6e@mozmail.com">
-    <img src="welcome.svg" style="width: 100%;" alt="Click to copy email">
+    <img src="welcome.svg" alt="Click to copy email">
     </a>
 </div>
