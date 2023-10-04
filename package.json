@@ -1,0 +1,24 @@
+{
+  "name": "rrr",
+  "version": "1.0.0",
+  "description": "<div style=\"width:100%\">\r     <a href=\"mailto:yl29qtw6e@mozmail.com\">\r     <img src=\"welcome.svg\" style=\"width:100%\" alt=\"Click to copy email\">\r     </a>\r </div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webPrsnr/rrrr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webPrsnr/rrrr/issues"
+  },
+  "homepage": "https://github.com/webPrsnr/rrrr#readme",
+  "dependencies": {
+    "svgson":"^5.3.1",
+    "markdown-it":"^13.0.2"
+  }
+}
