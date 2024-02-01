@@ -1,5 +1,5 @@
 var svgService = require("./service");
-var getSvgTemplate = () => {
+var getSvgTemplate = (currentDate) => {
   var svg = {
     name: "svg",
     type: "element",
@@ -43,7 +43,7 @@ var getSvgTemplate = () => {
                     name: "",
                     type: "text",
                     value:
-                      '\n\t\t\t\t* {\n\t\t\t\t\tmargin: 0;\n\t\t\t\t\tpadding: 0;\n\t\t\t\t\tcolor: inherit;\n\t\t\t\t\ttext-decoration: none;\n\t\t\t\t\tlist-style: none;\n\t\t\t\t\toutline: none;\n\t\t\t\t\tbox-sizing: border-box;\n\t\t\t\t}\n\n\t\t\t\t.body {\n\t\t\t\t\t--color-default-bg: #EEE;\n\t\t\t\t\t--color-reply-bg: #ddd;\n\t\t\t\t\t--color-title: #004A99;\n\t\t\t\t\t--color-primary: #333;\n\t\t\t\t\t--color-secondary: #5d5d5d;\n\t\t\t\t\t--color-link: #789922;\n\t\t\t\t\t--color-link-active: #f60;\n\t\t\t\t\t--color-icon: #8c8c8c;\n\t\t\t\t\theight: 600px;\n\t\t\t\t\twidth: 100%;\n\n\t\t\t\t\tfont-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";\n\n\t\t\t\t\tfont-size: 10px;\n\t\t\t\t\tline-height: 1.1;\n\t\t\t\t}\n\n\t\t\t\t.container {\n\t\t\t\t\tbackground-color: var(--color-default-bg)\n\t\t\t\t}\n\n\t\t\t\t.link {\n\t\t\t\t\tcolor: var(--color-link)\n\t\t\t\t}\n\n\t\t\t\t.link__active {\n\t\t\t\t\tcolor: var(--color-link-active);\n\t\t\t\t}\n\n\n\t\t\t\t.op__detail {\n\t\t\t\t\tfont-size: 0.9em;\n\t\t\t\t\tcolor: var(--color-secondary);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\n\t\t\t\t.op__title h1 {\n\t\t\t\t\tfont-size: 1.1em;\n\t\t\t\t\tcolor: var(--color-title);\n\t\t\t\t\tfont-weight: 700;\n\t\t\t\t}\n\n\t\t\t\t.image {\n\t\t\t\t\tfont-size: 70%;\n\t\t\t\t}\n\n\t\t\t\t.image__descr {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tgap:5px;\n\t\t\t\t\talign-items: end;\n\t\t\t\t\tmargin-bottom: 0.1rem;\n\t\t\t\t}\n\n\t\t\t\t.image__img {\n\t\t\t\t\tborder: 1px solid var(--color-secondary);\n\t\t\t\t}\n\n\t\t\t\t.op__images {\n\t\t\t\t\tpadding-left: 16px;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tfont-size: 0.8em;\n\t\t\t\t\tgap: 15px;\n\t\t\t\t\tcolor: var(--color-secondary);\n\t\t\t\t}\n\n\n\t\t\t\t.op__article {\n\t\t\t\t\tpadding: 0.25rem 2rem;\n\t\t\t\t}\n\n\t\t\t\t.op__icons {\n\t\t\t\t\tdisplay: grid;\n\t\t\t\t\tgrid-template-columns: 1fr 1fr;\n\t\t\t\t\tgap: 3px;\n\t\t\t\t}\n\n\t\t\t\tfooter {\n\t\t\t\t\tfont-size: 70%;\n\t\t\t\t\tpadding: 0 0 0.25rem 1.25rem;\n\t\t\t\t}\n\n\t\t\t\tfooter span:nth-child(even) {\n\t\t\t\t\tmargin-left: 5px;\n\t\t\t\t}\n\n\t\t\t\t.reply {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tmax-width: 20rem;\n\t\t\t\t\tbackground-color: var(--color-reply-bg);\n\t\t\t\t\tmargin: 2px 0 4px 20px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t}\n\n\t\t\t\t.reply::before {\n\t\t\t\t\tcontent: \'...\';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcolor: var(--color-icon);\n\t\t\t\t\ttop: -5px;\n\t\t\t\t\tleft: -16px;\n\t\t\t\t}\n\n\t\t\t\t.reply__detail {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t\tfont-size: 0.9em;\n\t\t\t\t\tpadding-left: 0.5rem;\n\t\t\t\t\tpadding-top: 0.25rem;\n\t\t\t\t\tcolor: var(--color-secondary);\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\n\t\t\t\t.reply__post {\n\t\t\t\t\tpadding: 0.45rem 0 0.35rem 0.45rem;\n\t\t\t\t\tline-height: 13px;\n\t\t\t\t}\n\n\t\t\t\t.reply__to {\n\t\t\t\t\tdisplay: block;\n\t\t\t\t\tmargin-bottom: 0.2rem;\n\t\t\t\t\tcolor: var(--color-link-active)\n\t\t\t\t}\n\t\t\t',
+                      '\n\t\t\t\t* {\n\t\t\t\t\tmargin: 0;\n\t\t\t\t\tpadding: 0;\n\t\t\t\t\tcolor: inherit;\n\t\t\t\t\ttext-decoration: none;\n\t\t\t\t\tlist-style: none;\n\t\t\t\t\toutline: none;\n\t\t\t\t\tbox-sizing: border-box;\n\t\t\t\t}\n\n\t\t\t\t.body {\n\t\t\t\t\t--color-default-bg: #EEE;\n\t\t\t\t\t--color-reply-bg: #ddd;\n\t\t\t\t\t--color-title: #004A99;\n\t\t\t\t\t--color-primary: #333;\n\t\t\t\t\t--color-secondary: #5d5d5d;\n\t\t\t\t\t--color-link: #789922;\n\t\t\t\t\t--color-link-active: #f60;\n\t\t\t\t\t--color-icon: #8c8c8c;\n\t\t\t\t\theight: 600px;\n\t\t\t\t\twidth: 100%;\n\n\t\t\t\t\tfont-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";\n\n\t\t\t\t\tfont-size: 10px;\n\t\t\t\t\tline-height: 1.1;\n\t\t\t\t}\n\n\t\t\t\t.container {\n\t\t\t\t\tbackground-color: var(--color-default-bg)\n\t\t\t\t}\n\n\t\t\t\t.link {\n\t\t\t\t\tcolor: var(--color-link)\n\t\t\t\t}\n\n\t\t\t\t.link__active {\n\t\t\t\t\tcolor: var(--color-link-active);\n\t\t\t\t}\n\n\n\t\t\t\t.op__detail {\n\t\t\t\t\tfont-size: 0.9em;\n\t\t\t\t\tcolor: var(--color-secondary);\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\n\t\t\t\t.op__title h1 {\n\t\t\t\t\tfont-size: 1.1em;\n\t\t\t\t\tcolor: var(--color-title);\n\t\t\t\t\tfont-weight: 700;\n\t\t\t\t}\n\n\t\t\t\t.op__number {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t}\n\n\t\t\t\t.image {\n\t\t\t\t\tfont-size: 70%;\n\t\t\t\t}\n\n\t\t\t\t.image__descr {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tgap:5px;\n\t\t\t\t\talign-items: end;\n\t\t\t\t\tmargin-bottom: 0.1rem;\n\t\t\t\t}\n\n\t\t\t\t.image__img {\n\t\t\t\t\tborder: 1px solid var(--color-secondary);\n\t\t\t\t}\n\n\t\t\t\t.op__images {\n\t\t\t\t\tpadding-left: 16px;\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tfont-size: 0.8em;\n\t\t\t\t\tgap: 15px;\n\t\t\t\t\tcolor: var(--color-secondary);\n\t\t\t\t}\n\n\n\t\t\t\t.op__article {\n\t\t\t\t\tpadding: 0.25rem 2rem;\n\t\t\t\t}\n\n\t\t\t\t.op__icons {\n\t\t\t\t\tdisplay: grid;\n\t\t\t\t\tgrid-template-columns: 1fr 1fr;\n\t\t\t\t\tgap: 3px;\n\t\t\t\t}\n\n\t\t\t\tfooter {\n\t\t\t\t\tfont-size: 70%;\n\t\t\t\t\tpadding: 0 0 0.25rem 1.25rem;\n\t\t\t\t}\n\n\t\t\t\tfooter span:nth-child(even) {\n\t\t\t\t\tmargin-left: 5px;\n\t\t\t\t}\n\n\t\t\t\t.reply {\n\t\t\t\t\tposition: relative;\n\t\t\t\t\tmax-width: 20rem;\n\t\t\t\t\tbackground-color: var(--color-reply-bg);\n\t\t\t\t\tmargin: 2px 0 4px 20px;\n\t\t\t\t\tborder-radius: 3px;\n\t\t\t\t}\n\n\t\t\t\t.reply::before {\n\t\t\t\t\tcontent: \'...\';\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tfont-weight: 600;\n\t\t\t\t\tcolor: var(--color-icon);\n\t\t\t\t\ttop: -5px;\n\t\t\t\t\tleft: -16px;\n\t\t\t\t}\n\n\t\t\t\t.reply__detail {\n\t\t\t\t\tdisplay: flex;\n\t\t\t\t\tgap: 6px;\n\t\t\t\t\tfont-size: 0.9em;\n\t\t\t\t\tpadding-left: 0.5rem;\n\t\t\t\t\tpadding-top: 0.25rem;\n\t\t\t\t\tcolor: var(--color-secondary);\n\t\t\t\t\talign-items: center;\n\t\t\t\t}\n\n\t\t\t\t.reply__post {\n\t\t\t\t\tpadding: 0.45rem 0 0.35rem 0.45rem;\n\t\t\t\t\tline-height: 13px;\n\t\t\t\t}\n\n\t\t\t\t.reply__to {\n\t\t\t\t\tdisplay: block;\n\t\t\t\t\tmargin-bottom: 0.2rem;\n\t\t\t\t\tcolor: var(--color-link-active)\n\t\t\t\t}\n\t\t\t',
                     parent: null,
                     attributes: {},
                     children: [],
@@ -161,7 +161,8 @@ var getSvgTemplate = () => {
                                       {
                                         name: "",
                                         type: "text",
-                                        value: "24/11/2023",
+                                        value:
+                                          svgService.getLocaleDate(currentDate),
                                         parent: null,
                                         attributes: {},
                                         children: [],
@@ -189,7 +190,7 @@ var getSvgTemplate = () => {
                                       {
                                         name: "",
                                         type: "text",
-                                        value: "Fri",
+                                        value: svgService.getDay(currentDate),
                                         parent: null,
                                         attributes: {},
                                         children: [],
@@ -217,7 +218,8 @@ var getSvgTemplate = () => {
                                       {
                                         name: "",
                                         type: "text",
-                                        value: "09:42:55",
+                                        value:
+                                          svgService.getLocaleTime(currentDate),
                                         parent: null,
                                         attributes: {},
                                         children: [],
@@ -930,7 +932,8 @@ var getSvgTemplate = () => {
                                   {
                                     name: "",
                                     type: "text",
-                                    value: "24/11/2023",
+                                    value:
+                                      svgService.getLocaleDate(currentDate),
                                     parent: null,
                                     attributes: {},
                                     children: [],
@@ -947,24 +950,8 @@ var getSvgTemplate = () => {
                                   {
                                     name: "",
                                     type: "text",
-                                    value: "Sub",
-                                    parent: null,
-                                    attributes: {},
-                                    children: [],
-                                  },
-                                ],
-                              },
-                              {
-                                name: "span",
-                                type: "element",
-                                value: "",
-                                parent: null,
-                                attributes: {},
-                                children: [
-                                  {
-                                    name: "",
-                                    type: "text",
-                                    value: "09:50:43",
+                                    value:
+                                      svgService.getSubLocaleTime(currentDate),
                                     parent: null,
                                     attributes: {},
                                     children: [],
